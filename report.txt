@@ -1,0 +1,6 @@
+             precision    recall  f1-score   support
+
+   labels_1      0.969     0.952     0.960       165
+  labels_-1      0.952     0.970     0.961       165
+
+avg / total      0.961     0.961     0.961       330
