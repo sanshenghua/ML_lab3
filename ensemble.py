@@ -13,7 +13,6 @@ class AdaBoostClassifier:
     def fit(self,X,y):
          w = numpy.ones((X.shape[0],))/X.shape[0]
          '''Build a boosted classifier from the training set (X, y).
-
         Returns:
             X: An ndarray indicating the samples to be trained, which shape should be (n_samples,n_features).
             y: An ndarray indicating the ground-truth labels correspond to X, which shape should be (n_samples,1).
@@ -38,13 +37,10 @@ class AdaBoostClassifier:
              w = w/w.sum()
               
     def predict_scores(self, X):
-        self.Result = numpy.zeros((X.shape[0],),dtype=numpy.float32)
-        
+        self.Result = numpy.zeros((X.shape[0],),dtype=numpy.float32)       
         '''Calculate the weighted sum score of the whole base classifiers for given samples.
-
         Args:
             X: An ndarray indicating the samples to be predicted, which shape should be (n_samples,n_features).
-
         Returns:
             An one-dimension ndarray indicating the scores of differnt samples, which shape should be (n_samples,1).
         '''		
@@ -54,11 +50,9 @@ class AdaBoostClassifier:
     def predict(self, X, threshold=0):	    
         result = numpy.zeros((X.shape[0],),dtype=numpy.float32)
         '''Predict the catagories for geven samples.
-
         Args:
             X: An ndarray indicating the samples to be predicted, which shape should be (n_samples,n_features).
             threshold: The demarcation number of deviding the samples into two parts.
-
         Returns:
             An ndarray consists of predicted labels, which shape should be (n_samples,1).
         '''	    
